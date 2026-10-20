@@ -240,7 +240,7 @@ def main():
                         exps.append(Explosion(bomb, 50))
         bombs = [bomb for bomb in bombs if bomb is not None]
         beams = [beam for beam in beams if beam is not None]
-        beams = [beam for beam in beams if check_bound(beam.rct) == (True, True)]
+        beams = [beam for beam in beams if check_bound(beam.rct) == (True, True)] # 画面内のビームのみを残し、画面外に出たビームをリストから削除する
         exps = [exp for exp in exps if exp.life > 0]
 
         key_lst = pg.key.get_pressed()
